@@ -1,0 +1,11 @@
+#root {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", san-serif;
+  background: #000;
+  color: #fff;
+}
