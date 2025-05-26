@@ -8,7 +8,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.container {
+.nav-container {
   max-width: 1140px;
   margin: 0 auto;
   width: 100%;
@@ -63,7 +63,7 @@ body {
 
 .arrow {
   margin-left: 0.3em;
-  font-size: 0.7em;
+  font-size: 0.8rem;
 }
 
 .dropdown-menu {

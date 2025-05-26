@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import "./navBar.css"; // Assuming you have a CSS file for styles
+import "./navBar.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 const NavBar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
 
@@ -9,7 +11,7 @@ const NavBar = () => {
 
   return (
     <nav className="navbar">
-      <div className="container">
+      <div className="nav-container">
         <div className="nav-logo">Ola Cloud</div>
         <div>
           <ul className="nav-list">
@@ -36,7 +38,10 @@ const NavBar = () => {
               onMouseLeave={() => handleDropdown(null)}
             >
               <a href="#blog">
-                Blog <span className="arrow">&#9662;</span>
+                Blog{" "}
+                <span className="arrow">
+                  <FontAwesomeIcon icon={faAngleDown} />
+                </span>
               </a>
               {openDropdown === "blog" && (
                 <ul className="dropdown-menu">
@@ -55,7 +60,10 @@ const NavBar = () => {
               onMouseLeave={() => handleDropdown(null)}
             >
               <a href="#pages">
-                Pages <span className="arrow">&#9662;</span>
+                Pages{" "}
+                <span className="arrow">
+                  <FontAwesomeIcon icon={faAngleDown} />
+                </span>
               </a>
               {openDropdown === "pages" && (
                 <ul className="dropdown-menu">
