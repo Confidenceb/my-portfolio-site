@@ -45,44 +45,77 @@ const Services = () => {
     },
   ];
 
+  const statsData = [
+    {
+      count: 8,
+      label: "Projects Completed",
+    },
+    {
+      count: 3,
+      label: "Happy Clients",
+    },
+    {
+      count: 6,
+      label: "Technologies Mastered",
+    },
+    {
+      count: 1,
+      label: "Year of Experience",
+    },
+  ];
+
   return (
-    <div className="services-section">
-      <div className="container">
-        <h1 className="services-header">My Offered Services</h1>
-        <div className="services-list">
-          {servicesData.map((service, index) => (
-            <div
-              key={index}
-              className="service-item"
-              onMouseEnter={() => setActiveIndex(index)}
-              onMouseLeave={() => setActiveIndex(null)}
-              style={{
-                cursor: activeIndex === index ? "pointer" : "default",
-              }}
-            >
-              <FontAwesomeIcon
-                icon={service.icon}
-                className="service-icon"
+    <>
+      <div className="services-section">
+        <div className="container">
+          <h1 className="services-header">My Offered Services</h1>
+          <div className="services-list">
+            {servicesData.map((service, index) => (
+              <div
+                key={index}
+                className="service-item"
+                onMouseEnter={() => setActiveIndex(index)}
+                onMouseLeave={() => setActiveIndex(null)}
                 style={{
-                  color: activeIndex === index ? "#d95a" : "#fff",
-                  transition: "color 0.3s ease",
-                }}
-              />
-              <h2
-                className="service-title"
-                style={{
-                  color: activeIndex === index ? "#d95a" : "#fff",
-                  transition: "color 0.3s ease",
+                  cursor: activeIndex === index ? "pointer" : "default",
                 }}
               >
-                {service.title}
-              </h2>
-              <p className="service-description">{service.description}</p>
-            </div>
-          ))}
+                <FontAwesomeIcon
+                  icon={service.icon}
+                  className="service-icon"
+                  style={{
+                    color: activeIndex === index ? "#d95a" : "#fff",
+                    transition: "color 0.3s ease",
+                  }}
+                />
+                <h2
+                  className="service-title"
+                  style={{
+                    color: activeIndex === index ? "#d95a" : "#fff",
+                    transition: "color 0.3s ease",
+                  }}
+                >
+                  {service.title}
+                </h2>
+                <p className="service-description">{service.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+      <div className="achievement-section">
+        <div className="achievement container">
+          <div className="achievement-list">
+            {statsData.map((stat, index) => (
+              <div key={index} className="achievement-item">
+                <h2 className="achievement-count">{stat.count}</h2>
+                <p className="achievement-label">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

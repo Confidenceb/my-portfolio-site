@@ -37,3 +37,23 @@
 .service-icon {
   font-size: 1.8rem;
 }
+
+.achievement-section {
+  background-color: #d95a;
+  padding: 3.6rem 0;
+}
+
+.achievement-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.achievement-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  text-align: center;
+}
