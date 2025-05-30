@@ -24,8 +24,13 @@
   padding: 1.5rem;
   text-align: center;
   color: #f0f0f0;
+  transition: transform 0.2s ease;
 
   font-size: 0.8rem;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
 }
 
 .service-title {

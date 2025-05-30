@@ -4,6 +4,7 @@ import NavBar from "./nav-bar";
 import Hero from "./hero";
 import AboutSection from "./about-section";
 import Services from "./services";
+import Projects from "./project";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         </div>
         <AboutSection />
         <Services />
+        <Projects />
       </div>
     </>
   );
