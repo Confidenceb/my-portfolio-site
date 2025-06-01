@@ -46,7 +46,9 @@
 
 // export default ClientFeedback;
 import React, { useState } from "react";
-import { FaArrowUp, FaArrowDown } from "@fortawesome/react-fontawesome";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 const feedbackData = [
   {
@@ -101,10 +103,10 @@ const ClientFeedback = () => {
 
       <div className="nav-buttons">
         <button onClick={handleUp}>
-          <FaArrowUp />
+          <FontAwesomeIcon icon={faAngleUp} className="service-icon" />
         </button>
         <button onClick={handleDown}>
-          <FaArrowDown />
+          <FontAwesomeIcon icon={faAngleDown} className="service-icon" />
         </button>
       </div>
 
