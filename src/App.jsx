@@ -1,10 +1,10 @@
-import { useState } from "react";
 import "./App.css";
 import NavBar from "./nav-bar";
 import Hero from "./hero";
 import AboutSection from "./about-section";
 import Services from "./services";
 import Projects from "./project";
+import ClientFeedback from "./ClientFeedback";
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
         <AboutSection />
         <Services />
         <Projects />
+        <ClientFeedback />
       </div>
     </>
   );
