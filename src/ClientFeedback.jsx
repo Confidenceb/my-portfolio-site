@@ -1,52 +1,5 @@
-// import React from "react";
-// import "./ClientFeedback.css";
-
-// const ClientFeedback = () => {
-//   const testimonials = [
-//     {
-//       quote:
-//         "A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes.",
-//       name: "Carolyn Craig",
-//       title: "CEO at Facebook",
-//       image: "https://dummyimage.com/100x100/000/fff",
-//     },
-//     {
-//       quote:
-//         "Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.",
-//       name: "Harriet Maxwell",
-//       title: "CEO at Google",
-//       image: "https://dummyimage.com/100x100/000/fff",
-//     },
-//   ];
-
-//   return (
-//     <div className="client-feedback">
-//       <div className="container">
-//         <h2>Client's Feedback About Me</h2>
-//         <div className="feedback-cards">
-//           {testimonials.map((item, index) => (
-//             <div className="feedback-card" key={index}>
-//               <img
-//                 src={item.image}
-//                 alt="Feedback Icon"
-//                 className="feedback-icon"
-//               />
-//               <div>
-//                 <p className="quote">"{item.quote}"</p>
-//                 <p className="name">{item.name}</p>
-//                 <p className="title">{item.title}</p>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ClientFeedback;
 import React, { useState } from "react";
-
+import "./ClientFeedback.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
@@ -98,34 +51,46 @@ const ClientFeedback = () => {
   const rightCard = feedbackData[(index + 1) % total];
 
   return (
-    <div className="client-feedback">
-      <h2>Client's Feedback About Me</h2>
+    <section className="client-feedback">
+      <div className="container">
+        <div className="section-header">
+          <p className="subtitle">Testimonials</p>
+          <h2 className="feedback-title">Client's Feedback</h2>
+        </div>
 
-      <div className="nav-buttons">
-        <button onClick={handleUp}>
-          <FontAwesomeIcon icon={faAngleUp} className="service-icon" />
-        </button>
-        <button onClick={handleDown}>
-          <FontAwesomeIcon icon={faAngleDown} className="service-icon" />
-        </button>
-      </div>
+        <div className="feedback-content">
+          <div className="nav-buttons">
+            <button onClick={handleUp} className="nav-btn" aria-label="Previous">
+              <FontAwesomeIcon icon={faAngleUp} />
+            </button>
+            <button onClick={handleDown} className="nav-btn" aria-label="Next">
+              <FontAwesomeIcon icon={faAngleDown} />
+            </button>
+          </div>
 
-      <div className="feedback-cards-wrapper">
-        <div className="feedback-cards slide">
-          {[leftCard, rightCard].map((card, i) => (
-            <div key={i} className="feedback-card">
-              <img src={card.img} alt={card.name} className="feedback-icon" />
-              <div>
-                <p className="quote">"{card.quote}"</p>
-                <p className="name">{card.name}</p>
-                <p className="title">{card.title}</p>
-              </div>
+          <div className="feedback-cards-wrapper">
+            <div className="feedback-cards">
+              {[leftCard, rightCard].map((card, i) => (
+                <div key={i} className="feedback-card glass-card">
+                  <div className="feedback-header">
+                    <img src={card.img} alt={card.name} className="feedback-icon" />
+                    <div>
+                      <p className="name">{card.name}</p>
+                      <p className="title">{card.title}</p>
+                    </div>
+                  </div>
+                  <div className="quote-content">
+                    <p className="quote">"{card.quote}"</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 export default ClientFeedback;
+

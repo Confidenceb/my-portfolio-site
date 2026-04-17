@@ -49,39 +49,50 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="projects-section">
-      <h2 className="projects-title">My Projects</h2>
-      <div className="projects-grid">
-        {projects.map((project, index) => (
-          <div key={index} className="project-card">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="project-image"
-            />
-            <h3 className="project-name">{project.title}</h3>
-            <p className="project-type">{project.type}</p>
-            <p className="project-desc">{project.description}</p>
-            <div className="project-links">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
-              {project.live && (
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live Demo
-                </a>
-              )}
+    <section className="projects-section" id="portfolio">
+      <div className="container">
+        <div className="section-header">
+          <p className="subtitle">Portfolio</p>
+          <h2 className="projects-title">Featured Projects</h2>
+        </div>
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <div key={index} className="project-card glass-card">
+              <div className="project-image-container">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="project-image"
+                />
+              </div>
+              <div className="project-info">
+                <p className="project-type">{project.type}</p>
+                <h3 className="project-name">{project.title}</h3>
+                <p className="project-desc">{project.description}</p>
+                <div className="project-links">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-github"
+                  >
+                    Source Code
+                  </a>
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-live"
+                    >
+                      Live Preview ↗
+                    </a>
+                  )}
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

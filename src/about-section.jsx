@@ -3,7 +3,8 @@ import "./about-section.css";
 
 const AboutSection = () => {
   return (
-    <div className="about-section-box">
+    <div className="about-section-box" id="about">
+
       <div className="about-section container">
         <div className="about-image">
           <img

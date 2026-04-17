@@ -5,22 +5,28 @@ import AboutSection from "./about-section";
 import Services from "./services";
 import Projects from "./project";
 import ClientFeedback from "./ClientFeedback";
+import Contact from "./Contact";
 
 function App() {
   return (
-    <>
-      <div>
-        <NavBar />
-        <div className="content container">
-          <Hero />
-        </div>
+    <div className="app-wrapper">
+      <NavBar />
+      <main className="main-content">
+        <Hero />
         <AboutSection />
         <Services />
         <Projects />
         <ClientFeedback />
-      </div>
-    </>
+        <Contact />
+      </main>
+      <footer className="footer-simple">
+        <div className="container">
+          <p>&copy; {new Date().getFullYear()} Ola Cloud. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
   );
 }
 
 export default App;
+

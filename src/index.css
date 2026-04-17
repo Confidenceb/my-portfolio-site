@@ -1,36 +1,94 @@
-/* #F2BB16
-#BF9821
-#A66D03
-#F29A2E
-#D95A2B
-#732B1A
-#D9BFB0
-#261515
-#736B02
-#8C6A03
-#59484D
-#345944
-#736002 */
+:root {
+  --primary: #d95a2b; /* Constant orange accent */
+  --primary-hover: #732b1a;
+  --bg-dark: #0a0a0c;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(12px);
+  --text-main: #ffffff;
+  --text-muted: #a1a1aa;
+}
 
-/* #3F3A14 => #733A29 => #D3B6A6 */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-dark);
+  background: radial-gradient(circle at top right, #1a1a2e, #0a0a0c),
+              radial-gradient(circle at bottom left, #2a0a0a, #0a0a0c);
+  background-attachment: fixed;
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
 
 .btn {
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 0.9rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  width: fit-content;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  cursor: pointer;
+  border: none;
 }
 
-.btn:hover {
-  background: #732b1a;
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(217, 90, 43, 0.2);
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+.app-wrapper {
+  overflow-x: hidden;
+}
+
+.footer-simple {
+  padding: 4rem 0;
+  border-top: 1px solid var(--glass-border);
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.footer-simple p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }

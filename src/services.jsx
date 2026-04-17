@@ -7,6 +7,7 @@ import {
   faPalette,
   faLayerGroup,
   faCodeBranch,
+  faProjectDiagram,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Services = () => {
@@ -18,6 +19,12 @@ const Services = () => {
       title: "Frontend Development",
       description:
         "Building responsive user interfaces with HTML, CSS, JavaScript, and React.",
+    },
+    {
+      icon: faProjectDiagram,
+      title: "Product Management",
+      description:
+        "Organizing workflows and tracking progress using tools like Notion and Trello.",
     },
     {
       icon: faServer,
@@ -45,6 +52,7 @@ const Services = () => {
     },
   ];
 
+
   const statsData = [
     {
       count: 8,
@@ -66,35 +74,27 @@ const Services = () => {
 
   return (
     <>
-      <div className="services-section">
+      <div className="services-section" id="service">
         <div className="container">
-          <h1 className="services-header">My Offered Services</h1>
+          <div className="section-header">
+            <p className="subtitle">Expertise</p>
+            <h1 className="services-header">My Offered Services</h1>
+          </div>
           <div className="services-list">
             {servicesData.map((service, index) => (
               <div
                 key={index}
-                className="service-item"
+                className={`service-item glass-card ${activeIndex === index ? "active" : ""}`}
                 onMouseEnter={() => setActiveIndex(index)}
                 onMouseLeave={() => setActiveIndex(null)}
-                style={{
-                  cursor: activeIndex === index ? "pointer" : "default",
-                }}
               >
-                <FontAwesomeIcon
-                  icon={service.icon}
-                  className="service-icon"
-                  style={{
-                    color: activeIndex === index ? "#d95a" : "#fff",
-                    transition: "color 0.3s ease",
-                  }}
-                />
-                <h2
-                  className="service-title"
-                  style={{
-                    color: activeIndex === index ? "#d95a" : "#fff",
-                    transition: "color 0.3s ease",
-                  }}
-                >
+                <div className="service-icon-wrapper">
+                  <FontAwesomeIcon
+                    icon={service.icon}
+                    className="service-icon"
+                  />
+                </div>
+                <h2 className="service-title">
                   {service.title}
                 </h2>
                 <p className="service-description">{service.description}</p>
@@ -104,8 +104,8 @@ const Services = () => {
         </div>
       </div>
       <div className="achievement-section">
-        <div className="achievement container">
-          <div className="achievement-list">
+        <div className="container">
+          <div className="achievement-list glass-card">
             {statsData.map((stat, index) => (
               <div key={index} className="achievement-item">
                 <h2 className="achievement-count">{stat.count}</h2>
