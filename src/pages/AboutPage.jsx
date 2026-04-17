@@ -56,10 +56,10 @@ const AboutPage = () => {
               </div>
               <div className="social-icon-box">
                 <a href="https://github.com/Confidenceb" target="_blank" className="mini-social-btn glass-card" title="Github">
-                  <ExternalLink size={20} />
+                  <ExternalLink size={22} strokeWidth={2.5} />
                 </a>
-                <a href="https://linkedin.com" target="_blank" className="mini-social-btn glass-card" title="LinkedIn">
-                  <MessageCircle size={20} />
+                <a href="https://wa.me/2349136936326" target="_blank" className="mini-social-btn glass-card" title="WhatsApp">
+                  <MessageCircle size={22} strokeWidth={2.5} />
                 </a>
               </div>
             </div>

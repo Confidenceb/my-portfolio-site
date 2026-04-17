@@ -21,8 +21,8 @@
 }
 
 .page-title {
-  font-size: 4rem; /* Reduced from 5rem */
-  font-weight: 800; /* Reduced from 900 */
+  font-size: 3.8rem;
+  font-weight: 700; /* Reduced as requested */
   margin-bottom: 1rem;
   letter-spacing: -2px;
   line-height: 1.1;
@@ -53,7 +53,7 @@
 }
 
 .profile-img-box {
-  width: 160px; /* Slightly smaller */
+  width: 160px;
   height: 160px;
   border-radius: 50%;
   padding: 6px;
@@ -115,27 +115,31 @@
   display: flex;
   gap: 1rem;
   margin-top: 1.5rem;
+  position: relative;
+  z-index: 10;
 }
 
 .mini-social-btn {
-  width: 42px;
-  height: 42px;
+  width: 46px;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 12px;
   color: #fff !important;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .mini-social-btn svg {
   color: #fff !important;
+  display: block; /* Ensure it renders */
 }
 
 .mini-social-btn:hover {
   background: var(--primary);
+  border-color: var(--primary);
   transform: translateY(-5px);
 }
 
@@ -181,7 +185,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: auto; /* Push to bottom if needed, but flex handles overlap */
+  margin-top: auto;
 }
 
 .skill-pill {
@@ -201,18 +205,19 @@
 
 .expertise-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Stabilized grid */
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
 .exp-card-small {
-  padding: 2rem !important;
+  padding: 3.5rem 2rem !important;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.2rem;
   align-items: center;
   text-align: center;
+  min-height: 220px;
 }
 
 .exp-card-small h3 {
