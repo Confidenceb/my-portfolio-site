@@ -1,6 +1,23 @@
 import React, { useState } from "react";
 import "./Contact.css";
-import { Mail, MessageCircle, MapPin } from "lucide-react";
+import { Mail, MessageCircle, MapPin, CheckCircle, X } from "lucide-react";
+
+const SuccessModal = ({ onClose }) => (
+  <div className="modal-overlay">
+    <div className="modal-content glass-card">
+      <div className="modal-icon">
+        <CheckCircle size={40} />
+      </div>
+      <h3 className="modal-title">Message Sent!</h3>
+      <p className="modal-text">
+        Success! Your message has been sent to Ola Cloud. I'll get back to you as soon as possible.
+      </p>
+      <button className="btn btn-primary modal-btn" onClick={onClose}>
+        Close
+      </button>
+    </div>
+  </div>
+);
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +27,7 @@ const Contact = () => {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -20,7 +38,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formspree.io/f/mkgowndk", { // Using the user's email endpoint placeholder or actual
+      const response = await fetch("https://formspree.io/f/mkgowndk", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -28,12 +46,12 @@ const Contact = () => {
         },
         body: JSON.stringify({
           ...formData,
-          _to: "gboljamiu207@gmail.com" // Explicitly mentioned target
+          _to: "gboljamiu207@gmail.com"
         })
       });
 
       if (response.ok) {
-        alert("Success! Your message has been sent to Ola Cloud.");
+        setShowModal(true);
         setFormData({
           name: "",
           email: "",
@@ -53,6 +71,8 @@ const Contact = () => {
   return (
     <section className="contact-section" id="contact">
       <div className="container">
+        {showModal && <SuccessModal onClose={() => setShowModal(false)} />}
+        
         <div className="section-header">
           <p className="subtitle">Get In Touch</p>
           <h2 className="contact-title">Let's Work Together</h2>

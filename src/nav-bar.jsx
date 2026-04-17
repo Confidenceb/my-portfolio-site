@@ -16,10 +16,15 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setMobileMenuOpen(false);
+  };
+
   return (
     <nav className={`navbar ${isScrolled ? "scrolled" : ""} ${mobileMenuOpen ? "mobile-open" : ""}`}>
       <div className="nav-container">
-        <Link to="/" className="nav-logo" onClick={() => setMobileMenuOpen(false)}>
+        <Link to="/" className="nav-logo" onClick={handleLogoClick}>
           Ola <span>Cloud</span>
         </Link>
 
