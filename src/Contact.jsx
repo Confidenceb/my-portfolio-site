@@ -45,8 +45,9 @@ const Contact = () => {
           "Accept": "application/json"
         },
         body: JSON.stringify({
-          ...formData,
-          _to: "gboljamiu207@gmail.com"
+          name: formData.name,
+          email: formData.email,
+          message: `${formData.subject}: ${formData.message}`,
         })
       });
 
@@ -59,9 +60,12 @@ const Contact = () => {
           message: ""
         });
       } else {
-        alert("Oops! There was a problem sending your message.");
+        const errorData = await response.json();
+        console.error("Formspree Error:", errorData);
+        alert(errorData.error || "Oops! There was a problem sending your message. Please check if your Formspree endpoint is activated.");
       }
     } catch (error) {
+      console.error("Fetch Error:", error);
       alert("Error reaching the server. Please try again later.");
     } finally {
       setIsSubmitting(false);

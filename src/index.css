@@ -2,9 +2,11 @@
   --primary: #d95a2b; /* Constant orange accent */
   --primary-hover: #732b1a;
   --bg-dark: #0a0a0c;
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-blur: blur(12px);
+  --glass-bg: rgba(255, 255, 255, 0.02);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: blur(25px);
+  --glass-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  --container-width: 1200px;
   --text-main: #ffffff;
   --text-muted: #a1a1aa;
 }
