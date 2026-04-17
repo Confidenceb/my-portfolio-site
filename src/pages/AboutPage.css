@@ -1,89 +1,91 @@
 .about-page-wrapper {
-  padding-top: 140px; /* Increased to clear the fixed navbar */
+  padding-top: 250px; /* Radical clearance for fixed navbar */
   min-height: 100vh;
-  background: radial-gradient(circle at top right, rgba(217, 90, 43, 0.1), transparent 50%),
-              radial-gradient(circle at bottom left, rgba(217, 90, 43, 0.1), transparent 50%);
-  padding-bottom: 100px;
+  background: radial-gradient(circle at 10% 10%, rgba(217, 90, 43, 0.15), transparent 40%),
+              radial-gradient(circle at 90% 90%, rgba(217, 90, 43, 0.15), transparent 40%);
+  padding-bottom: 150px;
 }
 
 .about-hero-section {
-  margin-bottom: 4rem;
-  text-align: center;
+  max-width: var(--container-width);
+  margin: 0 auto 6rem;
+  padding: 0 2rem;
 }
 
 .glass-hero-card {
   background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Stronger border */
   border-radius: 40px;
-  padding: 5rem 2rem;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  padding: 6rem 2rem;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
 }
 
 .page-title {
-  font-size: 5rem;
+  font-size: 5.5rem;
   font-weight: 900;
-  margin-bottom: 1.5rem;
-  letter-spacing: -2px;
-  line-height: 1; /* Fixes text collision */
+  margin-bottom: 2rem;
+  letter-spacing: -3px;
+  line-height: 1.1;
+  text-transform: uppercase;
 }
 
 .lead-text {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #e4e4e7;
-  max-width: 800px;
-  margin: 2rem auto 0; /* Added margin top to separate from title */
+  max-width: 900px;
+  margin: 0 auto;
   line-height: 1.6;
 }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 400px 1fr;
-  gap: 4rem;
+  grid-template-columns: 450px 1fr;
+  gap: 5rem;
   align-items: start;
 }
 
-/* Luxury Glass Effect */
-.luxury-glass {
-  background: rgba(255, 255, 255, 0.03) !important;
-  backdrop-filter: blur(40px) !important;
-  -webkit-backdrop-filter: blur(40px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3) !important;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.luxury-glass:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5) !important;
-  border-color: rgba(217, 90, 43, 0.5) !important;
-}
-
-/* Profile Column */
+/* Profiles & Sidebar */
 .profile-column {
   display: flex;
   flex-direction: column;
   gap: 3rem;
   position: sticky;
-  top: 140px;
+  top: 150px; /* Stick below clearance */
+}
+
+.luxury-glass {
+  background: rgba(255, 255, 255, 0.02) !important;
+  backdrop-filter: blur(40px) !important;
+  -webkit-backdrop-filter: blur(40px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+  border-radius: 40px !important;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.luxury-glass:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: var(--primary) !important;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6) !important;
 }
 
 .profile-card {
-  text-align: center;
   padding: 4rem 2rem;
-  border-radius: 30px;
+  text-align: center;
 }
 
 .profile-img-container {
-  width: 220px;
-  height: 220px;
-  margin: 0 auto 2.5rem;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto 3rem;
   border-radius: 50%;
-  padding: 8px;
+  padding: 10px;
   background: linear-gradient(135deg, var(--primary), transparent);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(217, 90, 43, 0.3);
+  overflow: hidden;
 }
 
 .profile-img {
@@ -91,167 +93,193 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.profile-card:hover .profile-img {
+  transform: scale(1.1);
 }
 
 .profile-meta h2 {
-  font-size: 2.2rem;
-  margin-bottom: 0.8rem;
+  font-size: 2.5rem;
   font-weight: 800;
+  margin-bottom: 0.5rem;
 }
 
 .profile-meta p {
   color: var(--primary);
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 .contact-summary {
-  padding: 3rem 2rem;
-  border-radius: 30px;
+  padding: 3.5rem 2.5rem;
 }
 
 .contact-summary h3 {
+  font-size: 1.5rem;
   margin-bottom: 2rem;
-  font-size: 1.4rem;
-  color: var(--primary);
+  color: #fff;
 }
 
 .summary-item {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-bottom: 1.5rem;
-  color: #d4d4d8;
-  font-size: 1.05rem;
+  margin-bottom: 1.8rem;
+  color: #a1a1aa;
+  font-size: 1.1rem;
+}
+
+.summary-item svg {
+  color: var(--primary);
 }
 
 .about-social-row {
   display: flex;
-  gap: 1.2rem;
-  margin-top: 2.5rem;
+  gap: 1.5rem;
+  margin-top: 3rem;
   justify-content: center;
 }
 
 .social-icon-btn {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 15px;
-  color: #fff !important; /* Fixed visibility */
+  border-radius: 18px;
   background: rgba(255, 255, 255, 0.05);
+  color: #fff !important; /* Visible! */
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
 
 .social-icon-btn:hover {
   background: var(--primary);
-  transform: scale(1.1);
+  border-color: var(--primary);
+  transform: rotate(10deg);
 }
 
-/* Content Column */
+/* Main Content Area */
 .content-column {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 4rem;
 }
 
 .bio-card, .stats-card {
-  padding: 4rem;
-  border-radius: 40px;
+  padding: 5rem 4rem;
 }
 
 .card-header {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 2.5rem;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 .header-icon {
+  width: 40px;
+  height: 40px;
   color: var(--primary);
-  width: 32px;
-  height: 32px;
 }
 
 .card-header h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -1px;
 }
 
 .bio-card p {
-  font-size: 1.25rem;
-  line-height: 1.9;
+  font-size: 1.3rem;
+  line-height: 2;
   color: #d4d4d8;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .expertise-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
+  gap: 3rem;
 }
 
 .exp-card {
-  padding: 3.5rem 2.5rem;
-  border-radius: 35px;
+  padding: 4rem 3rem;
 }
 
 .exp-icon {
-  width: 60px;
-  height: 60px;
-  background: rgba(217, 90, 43, 0.15);
+  width: 70px;
+  height: 70px;
+  background: rgba(217, 90, 43, 0.1);
   color: var(--primary);
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 18px;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .exp-card h3 {
-  font-size: 1.6rem;
-  margin-bottom: 1.2rem;
-  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
 }
 
 .exp-card p {
   color: #a1a1aa;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
 .skills-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.2rem;
+  gap: 1.5rem;
 }
 
 .skill-tag {
-  padding: 1rem 1.8rem;
-  font-size: 1rem;
-  font-weight: 600;
+  padding: 1.2rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
   border-radius: 100px;
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
-@media (max-width: 1200px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .profile-column {
-    position: static;
-  }
+.skill-tag:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.about-page-wrapper > * {
+  animation: fadeInUp 0.8s ease backwards;
+}
+
+@media (max-width: 1400px) {
+  .about-grid { grid-template-columns: 400px 1fr; gap: 3rem; }
+}
+
+@media (max-width: 1100px) {
+  .about-grid { grid-template-columns: 1fr; max-width: 800px; margin: 0 auto; }
+  .profile-column { position: static; }
+  .page-title { font-size: 4rem; }
 }
 
 @media (max-width: 768px) {
-  .about-page-wrapper { padding-top: 120px; }
-  .page-title { font-size: 3.5rem; }
+  .about-page-wrapper { padding-top: 150px; }
+  .page-title { font-size: 3rem; letter-spacing: -1px; }
   .lead-text { font-size: 1.2rem; }
   .expertise-grid { grid-template-columns: 1fr; }
-  .bio-card, .stats-card { padding: 3rem 2rem; }
+  .bio-card, .stats-card { padding: 3rem 1.5rem; }
 }
