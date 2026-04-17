@@ -1,85 +1,89 @@
 .about-page-wrapper {
-  padding-top: 100px;
+  padding-top: 140px; /* Increased to clear the fixed navbar */
   min-height: 100vh;
-  background: radial-gradient(circle at top right, rgba(217, 90, 43, 0.05), transparent 40%),
-              radial-gradient(circle at bottom left, rgba(217, 90, 43, 0.05), transparent 40%);
+  background: radial-gradient(circle at top right, rgba(217, 90, 43, 0.1), transparent 50%),
+              radial-gradient(circle at bottom left, rgba(217, 90, 43, 0.1), transparent 50%);
+  padding-bottom: 100px;
 }
 
 .about-hero-section {
-  padding: 60px 0;
+  margin-bottom: 4rem;
   text-align: center;
 }
 
 .glass-hero-card {
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 30px;
-  padding: 4rem 2rem;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  padding: 5rem 2rem;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
 }
 
 .page-title {
-  font-size: 4.5rem;
-  font-weight: 800;
+  font-size: 5rem;
+  font-weight: 900;
   margin-bottom: 1.5rem;
   letter-spacing: -2px;
+  line-height: 1; /* Fixes text collision */
 }
 
 .lead-text {
-  font-size: 1.4rem;
-  color: var(--text-muted);
+  font-size: 1.5rem;
+  color: #e4e4e7;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 2rem auto 0; /* Added margin top to separate from title */
+  line-height: 1.6;
 }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 3rem;
-  margin-top: 4rem;
+  grid-template-columns: 400px 1fr;
+  gap: 4rem;
   align-items: start;
 }
 
 /* Luxury Glass Effect */
 .luxury-glass {
   background: rgba(255, 255, 255, 0.03) !important;
-  backdrop-filter: blur(30px) !important;
-  -webkit-backdrop-filter: blur(30px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(40px) !important;
+  -webkit-backdrop-filter: blur(40px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .luxury-glass:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
-  border-color: rgba(217, 90, 43, 0.3) !important;
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5) !important;
+  border-color: rgba(217, 90, 43, 0.5) !important;
 }
 
 /* Profile Column */
 .profile-column {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 3rem;
   position: sticky;
-  top: 120px;
+  top: 140px;
 }
 
 .profile-card {
   text-align: center;
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
+  border-radius: 30px;
 }
 
 .profile-img-container {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto 2rem;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 2.5rem;
   border-radius: 50%;
-  padding: 10px;
+  padding: 8px;
   background: linear-gradient(135deg, var(--primary), transparent);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
 .profile-img {
@@ -87,131 +91,157 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .profile-meta h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+  font-weight: 800;
 }
 
 .profile-meta p {
   color: var(--primary);
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-weight: 700;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .contact-summary {
-  padding: 2rem;
+  padding: 3rem 2rem;
+  border-radius: 30px;
 }
 
 .contact-summary h3 {
-  margin-bottom: 1.5rem;
-  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  color: var(--primary);
 }
 
 .summary-item {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
-  margin-bottom: 1.2rem;
-  color: var(--text-muted);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #d4d4d8;
+  font-size: 1.05rem;
 }
 
 .about-social-row {
   display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
+  gap: 1.2rem;
+  margin-top: 2.5rem;
+  justify-content: center;
 }
 
 .social-icon-btn {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
-  color: #fff;
+  border-radius: 15px;
+  color: #fff !important; /* Fixed visibility */
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.social-icon-btn:hover {
+  background: var(--primary);
+  transform: scale(1.1);
 }
 
 /* Content Column */
 .content-column {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 3rem;
 }
 
 .bio-card, .stats-card {
-  padding: 3rem;
+  padding: 4rem;
+  border-radius: 40px;
 }
 
 .card-header {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .header-icon {
   color: var(--primary);
+  width: 32px;
+  height: 32px;
 }
 
 .card-header h2 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
+  font-weight: 800;
 }
 
 .bio-card p {
-  font-size: 1.15rem;
-  line-height: 1.8;
-  color: var(--text-muted);
-  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.9;
+  color: #d4d4d8;
+  margin-bottom: 2rem;
 }
 
 .expertise-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .exp-card {
-  padding: 2.5rem;
+  padding: 3.5rem 2.5rem;
+  border-radius: 35px;
 }
 
 .exp-icon {
-  width: 50px;
-  height: 50px;
-  background: rgba(217, 90, 43, 0.1);
+  width: 60px;
+  height: 60px;
+  background: rgba(217, 90, 43, 0.15);
   color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
-  margin-bottom: 1.5rem;
+  border-radius: 18px;
+  margin-bottom: 2rem;
 }
 
 .exp-card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+.exp-card p {
+  color: #a1a1aa;
+  line-height: 1.6;
 }
 
 .skills-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .skill-tag {
-  padding: 0.8rem 1.5rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  border-radius: 50px;
+  padding: 1rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 1200px) {
   .about-grid {
     grid-template-columns: 1fr;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .profile-column {
     position: static;
@@ -219,7 +249,9 @@
 }
 
 @media (max-width: 768px) {
-  .page-title { font-size: 3rem; }
+  .about-page-wrapper { padding-top: 120px; }
+  .page-title { font-size: 3.5rem; }
+  .lead-text { font-size: 1.2rem; }
   .expertise-grid { grid-template-columns: 1fr; }
-  .bio-card, .stats-card { padding: 2rem; }
+  .bio-card, .stats-card { padding: 3rem 2rem; }
 }
