@@ -46,8 +46,8 @@ const AboutPage = () => {
                 <span>English (Fluent)</span>
               </div>
               <div className="about-social-row">
-                <a href="#" className="social-icon-btn glass-card"><Github size={20} /></a>
-                <a href="#" className="social-icon-btn glass-card"><Linkedin size={20} /></a>
+                <a href="#" className="social-icon-btn glass-card"><Mail size={20} /></a>
+                <a href="#" className="social-icon-btn glass-card"><MessageCircle size={20} /></a>
               </div>
             </div>
           </div>
