@@ -1,0 +1,35 @@
+.contact-page {
+  padding-top: 80px;
+}
+
+.contact-hero {
+  padding: 80px 0 40px;
+  text-align: center;
+}
+
+.contact-hero .page-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.contact-hero .lead-text {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-page .contact-section {
+  padding-top: 2rem;
+}
+
+.extra-space {
+  height: 100px;
+}
+
+@media (max-width: 768px) {
+  .contact-hero .page-title {
+    font-size: 2.5rem;
+  }
+}

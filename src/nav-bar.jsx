@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./navBar.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { Menu, X } from "lucide-react";
+import { NavLink, Link } from "react-router-dom";
 
 const NavBar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -17,22 +16,12 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleDropdown = (menu) => {
-    if (window.innerWidth > 768) {
-      setOpenDropdown(menu);
-    }
-  };
-
-  const toggleMobileDropdown = (menu) => {
-    setOpenDropdown(openDropdown === menu ? null : menu);
-  };
-
   return (
     <nav className={`navbar ${isScrolled ? "scrolled" : ""} ${mobileMenuOpen ? "mobile-open" : ""}`}>
       <div className="nav-container">
-        <div className="nav-logo">
+        <Link to="/" className="nav-logo" onClick={() => setMobileMenuOpen(false)}>
           Ola <span>Cloud</span>
-        </div>
+        </Link>
 
         <button 
           className="mobile-toggle" 
@@ -45,23 +34,25 @@ const NavBar = () => {
         <div className={`nav-menu ${mobileMenuOpen ? "active" : ""}`}>
           <ul className="nav-list">
             <li>
-              <a href="#home" className="active" onClick={() => setMobileMenuOpen(false)}>
+              <NavLink to="/" end className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMobileMenuOpen(false)}>
                 Home
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
+              <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMobileMenuOpen(false)}>
+                About
+              </NavLink>
             </li>
             <li>
-              <a href="#service" onClick={() => setMobileMenuOpen(false)}>Service</a>
+              <a href="/#service" onClick={() => setMobileMenuOpen(false)}>Service</a>
             </li>
             <li>
-              <a href="#portfolio" onClick={() => setMobileMenuOpen(false)}>Portfolio</a>
+              <a href="/#portfolio" onClick={() => setMobileMenuOpen(false)}>Portfolio</a>
             </li>
             <li>
-              <a href="#contact" className="nav-contact-btn" onClick={() => setMobileMenuOpen(false)}>
+              <NavLink to="/contact" className="nav-contact-btn" onClick={() => setMobileMenuOpen(false)}>
                 Contact Me
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

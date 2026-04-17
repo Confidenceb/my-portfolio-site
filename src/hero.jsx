@@ -85,7 +85,7 @@ const Hero = () => {
           <div className="floating-card c1 glass-card">🚀 React</div>
           <div className="floating-card c2 glass-card">☁️ AWS</div>
           <div className="floating-card c3 glass-card">🎨 UI/UX</div>
-          <div className="floating-card c4 glass-card">📝 PM (Notion)</div>
+          <div className="floating-card c4 glass-card">📝 PM</div>
         </div>
 
       </div>

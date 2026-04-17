@@ -1,0 +1,162 @@
+.about-page {
+  padding-top: 80px;
+  background: transparent;
+}
+
+.about-hero {
+  padding: 100px 0 60px;
+  text-align: center;
+  position: relative;
+}
+
+.about-hero .page-title {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
+
+.about-hero .lead-text {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 2rem;
+  margin-bottom: 100px;
+}
+
+.profile-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.profile-img-card {
+  padding: 0;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+.quick-info h3 {
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+  color: var(--primary);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.social-links-about {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.social-links-about a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  color: var(--text-main);
+  transition: all 0.3s ease;
+}
+
+.social-links-about a:hover {
+  background: var(--primary);
+  transform: translateY(-3px);
+}
+
+.main-about {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-block h2, .skills-block h2, .philosophy-block h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.about-block p {
+  margin-bottom: 1.2rem;
+  color: var(--text-muted);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-item {
+  text-align: center;
+}
+
+.skill-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 1rem;
+  background: rgba(217, 90, 43, 0.1);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.skill-item h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.skill-item p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.philosophy-block blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 600;
+  border-left: 4px solid var(--primary);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  color: var(--text-main);
+}
+
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero .page-title {
+    font-size: 2.5rem;
+  }
+}

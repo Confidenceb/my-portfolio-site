@@ -9,28 +9,28 @@ const feedbackData = [
       "This developer exceeded our expectations. Timely, professional, and incredibly talented.",
     name: "Samuel David",
     title: "CTO at Amazon",
-    img: "https://via.placeholder.com/100",
+    img: "testimonial_profile_3_1776450535608.png",
   },
   {
     quote:
       "A reliable freelancer. Our project wouldn’t have succeeded without his contributions.",
     name: "Angela White",
     title: "Founder at Startup Inc.",
-    img: "https://via.placeholder.com/100",
+    img: "testimonial_profile_2_1776450515185.png",
   },
   {
     quote:
       "Creative and efficient. Highly recommend for any frontend development work.",
     name: "Michael Chen",
     title: "Tech Lead at ByteLabs",
-    img: "https://via.placeholder.com/100",
+    img: "testimonial_profile_1_1776450490202.png",
   },
   {
     quote:
       "Consistently delivers high-quality code. Communication was clear and prompt.",
     name: "Lina Torres",
     title: "Manager at SoftHub",
-    img: "https://via.placeholder.com/100",
+    img: "testimonial_profile_2_1776450515185.png",
   },
 ];
 

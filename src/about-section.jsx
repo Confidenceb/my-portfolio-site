@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import "./about-section.css";
 
 const AboutSection = () => {
@@ -24,9 +24,9 @@ const AboutSection = () => {
             with performance to deliver exceptional user experiences.
           </p>
           <div>
-            <a href="#learn-more" className="btn about-btn">
+            <Link to="/about" className="btn about-btn">
               View full detail
-            </a>
+            </Link>
           </div>
         </div>
       </div>
