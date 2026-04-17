@@ -55,8 +55,12 @@ const AboutPage = () => {
                 </div>
               </div>
               <div className="social-icon-box">
-                <a href="https://github.com/Confidenceb" target="_blank" className="mini-social-btn glass-card"><ExternalLink size={18} /></a>
-                <a href="#" className="mini-social-btn glass-card"><Mail size={18} /></a>
+                <a href="https://github.com/Confidenceb" target="_blank" className="mini-social-btn glass-card" title="Github">
+                  <ExternalLink size={20} />
+                </a>
+                <a href="https://linkedin.com" target="_blank" className="mini-social-btn glass-card" title="LinkedIn">
+                  <MessageCircle size={20} />
+                </a>
               </div>
             </div>
           </section>
@@ -98,7 +102,11 @@ const AboutPage = () => {
                 </div>
               </div>
 
-              <div className="expertise-row">
+               <div className="expertise-row">
+                <div className="exp-card-small glass-card luxury-glass">
+                  <Award size={24} />
+                  <h3>Product Management</h3>
+                </div>
                 <div className="exp-card-small glass-card luxury-glass">
                   <Award size={24} />
                   <h3>Frontend</h3>

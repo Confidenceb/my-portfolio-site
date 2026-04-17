@@ -21,17 +21,17 @@
 }
 
 .page-title {
-  font-size: 5rem;
-  font-weight: 900;
-  margin-bottom: 1.5rem;
+  font-size: 4rem; /* Reduced from 5rem */
+  font-weight: 800; /* Reduced from 900 */
+  margin-bottom: 1rem;
   letter-spacing: -2px;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .lead-text {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: #a1a1aa;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 /* Side-by-Side Hero Block */
@@ -40,9 +40,9 @@
   justify-content: space-between;
   align-items: center;
   gap: 4rem;
-  padding: 4rem !important;
+  padding: 3.5rem !important;
   margin-bottom: 4rem;
-  border-radius: 50px !important;
+  border-radius: 40px !important;
 }
 
 .profile-main {
@@ -53,8 +53,8 @@
 }
 
 .profile-img-box {
-  width: 180px;
-  height: 180px;
+  width: 160px; /* Slightly smaller */
+  height: 160px;
   border-radius: 50%;
   padding: 6px;
   background: linear-gradient(135deg, var(--primary), transparent);
@@ -69,7 +69,7 @@
 }
 
 .profile-name {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 800;
   margin-bottom: 0.5rem;
 }
@@ -77,26 +77,26 @@
 .profile-tagline {
   color: var(--primary);
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1rem;
   letter-spacing: 1px;
 }
 
 .contact-details-box {
   border-left: 1px solid rgba(255, 255, 255, 0.1);
-  padding-left: 4rem;
-  flex: 0 0 350px;
+  padding-left: 3rem;
+  flex: 0 0 320px;
 }
 
 .contact-details-box h3 {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
   color: #fff;
 }
 
 .contact-links-grid {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 .contact-small-item {
@@ -104,7 +104,7 @@
   align-items: center;
   gap: 1rem;
   color: #d4d4d8;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .contact-small-item svg {
@@ -114,18 +114,24 @@
 .social-icon-box {
   display: flex;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .mini-social-btn {
-  width: 45px;
-  height: 45px;
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
+  border-radius: 10px;
   color: #fff !important;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
+}
+
+.mini-social-btn svg {
+  color: #fff !important;
 }
 
 .mini-social-btn:hover {
@@ -195,8 +201,8 @@
 
 .expertise-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
