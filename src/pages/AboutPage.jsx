@@ -2,6 +2,7 @@ import React from "react";
 import { Mail, MessageCircle, MapPin, Award, BookOpen, User, Code, Globe, Sparkles, ExternalLink } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import aboutImg from "../img/about-img.JPEG";
 import "./AboutPage.css";
 
 const AboutPage = () => {
@@ -26,7 +27,7 @@ const AboutPage = () => {
             <div className="profile-main">
               <div className="profile-img-box">
                 <img 
-                  src="https://ca.slack-edge.com/T07466B189M-U079UMY5YKG-df1cc631da1a-512" 
+                  src={aboutImg} 
                   alt="Ola Cloud" 
                   className="profile-img"
                 />

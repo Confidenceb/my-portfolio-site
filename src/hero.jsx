@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import heroImg from "./img/hero-img.JPEG";
 import "./hero.css";
 import Typewriter from "typewriter-effect";
 
@@ -78,7 +79,7 @@ const Hero = () => {
           <div className="image-wrapper glass-card">
             <img
               className="hero-img"
-              src="https://ca.slack-edge.com/T07466B189M-U079UMY5YKG-df1cc631da1a-512"
+              src={heroImg}
               alt="Ola Cloud Profile"
             />
           </div>

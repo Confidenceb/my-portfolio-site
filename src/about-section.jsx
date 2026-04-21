@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./about-section.css";
+import aboutImg from "./img/about-img.JPEG";
 
 const AboutSection = () => {
   return (
@@ -10,7 +11,7 @@ const AboutSection = () => {
           <img
             className="hero-img"
             data-testid="slackProfilePicture"
-            src="https://ca.slack-edge.com/T07466B189M-U079UMY5YKG-df1cc631da1a-512"
+            src={aboutImg}
             alt="Slack Profile Picture"
           />
         </div>
