@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { supabase } from "./supabaseClient";
 import "./ClientFeedback.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faAngleUp, faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -9,6 +10,24 @@ const ClientFeedback = () => {
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({ name: "", title: "", quote: "" });
   const [selectedImage, setSelectedImage] = useState(null);
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      const { data, error } = await supabase
+        .from('testimonials')
+        .select('*')
+        .order('created_at', { ascending: false });
+        
+      if (error) {
+        console.error("Error fetching testimonials:", error);
+      } else if (data) {
+        setFeedbacks(data);
+      }
+    };
+    fetchTestimonials();
+  }, []);
 
   const total = feedbacks.length;
 
@@ -27,23 +46,38 @@ const ClientFeedback = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.name || !formData.quote) return;
+    setIsSubmitting(true);
     
     // Use uploaded image or generate default avatar for user
     const finalImg = selectedImage ? selectedImage : `https://ui-avatars.com/api/?name=${encodeURIComponent(formData.name)}&background=random&color=fff`;
 
     const newFeedback = {
-      ...formData,
+      name: formData.name,
+      title: formData.title || "",
+      quote: formData.quote,
       img: finalImg
     };
 
-    setFeedbacks([newFeedback, ...feedbacks]);
-    setFormData({ name: "", title: "", quote: "" });
-    setSelectedImage(null);
-    setShowForm(false);
-    setIndex(0); // Reset to show the newest one
+    const { data, error } = await supabase
+      .from('testimonials')
+      .insert([newFeedback])
+      .select();
+
+    if (error) {
+      console.error("Error submitting review:", error);
+      alert("There was an error submitting your review. Please try again.");
+    } else if (data) {
+      setFeedbacks([data[0], ...feedbacks]);
+      setFormData({ name: "", title: "", quote: "" });
+      setSelectedImage(null);
+      setShowForm(false);
+      setIndex(0); // Reset to show the newest one
+    }
+    
+    setIsSubmitting(false);
   };
 
   const leftCard = feedbacks[index];
@@ -101,7 +135,9 @@ const ClientFeedback = () => {
                     onChange={handleImageChange}
                   />
                 </div>
-                <button type="submit" className="btn btn-primary">Submit Review</button>
+                <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
+                  {isSubmitting ? "Submitting..." : "Submit Review"}
+                </button>
               </form>
             </div>
           </div>
