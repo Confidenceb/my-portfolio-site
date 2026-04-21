@@ -21,17 +21,20 @@
 }
 
 .page-title {
-  font-size: 3.8rem;
-  font-weight: 700; /* Reduced as requested */
+  font-size: 3.5rem;
+  font-weight: 600; /* Further softened */
   margin-bottom: 1rem;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
   line-height: 1.1;
 }
 
 .lead-text {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #a1a1aa;
   margin-top: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Side-by-Side Hero Block */
@@ -59,6 +62,14 @@
   padding: 6px;
   background: linear-gradient(135deg, var(--primary), transparent);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: floatProfile 6s ease-in-out infinite;
+  box-shadow: 0 0 30px rgba(217, 90, 43, 0.3);
+}
+
+@keyframes floatProfile {
+  0% { transform: translateY(0px); box-shadow: 0 0 30px rgba(217, 90, 43, 0.3); }
+  50% { transform: translateY(-10px); box-shadow: 0 0 50px rgba(217, 90, 43, 0.5); }
+  100% { transform: translateY(0px); box-shadow: 0 0 30px rgba(217, 90, 43, 0.3); }
 }
 
 .profile-img {
@@ -113,34 +124,36 @@
 
 .social-icon-box {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
   margin-top: 1.5rem;
   position: relative;
   z-index: 10;
 }
 
 .mini-social-btn {
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
+  border-radius: 14px;
   color: #fff !important;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .mini-social-btn svg {
   color: #fff !important;
-  display: block; /* Ensure it renders */
+  width: 22px;
+  height: 22px;
+  stroke-width: 2px;
 }
 
 .mini-social-btn:hover {
   background: var(--primary);
   border-color: var(--primary);
-  transform: translateY(-5px);
+  transform: translateY(-5px) rotate(8deg);
 }
 
 /* Info Grid */
@@ -150,11 +163,23 @@
   gap: 3rem;
 }
 
-.bio-inner, .competency-card {
+.bio-inner {
   padding: 4rem !important;
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.competency-card {
+  padding: 3rem !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .title-row {
@@ -180,15 +205,16 @@
   margin-bottom: 1.5rem;
 }
 
-/* Competencies FIXED Wrapper */
 .tags-flex-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: auto;
+  margin-top: 1.5rem;
 }
 
 .skill-pill {
+  position: relative;
+  overflow: hidden;
   padding: 0.8rem 1.5rem;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -196,28 +222,44 @@
   font-size: 0.9rem;
   font-weight: 600;
   transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.skill-pill::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 0%;
+  height: 100%;
+  background: rgba(217, 90, 43, 0.2);
+  transition: width 0.4s ease;
+  z-index: -1;
 }
 
 .skill-pill:hover {
   border-color: var(--primary);
-  background: rgba(217, 90, 43, 0.1);
+  transform: translateY(-2px);
+}
+
+.skill-pill:hover::before {
+  width: 100%;
 }
 
 .expertise-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Stabilized grid */
-  gap: 2rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
 }
 
 .exp-card-small {
-  padding: 3.5rem 2rem !important;
+  padding: 2.5rem 1.5rem !important;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
   align-items: center;
   text-align: center;
-  min-height: 220px;
+  min-height: 180px;
 }
 
 .exp-card-small h3 {

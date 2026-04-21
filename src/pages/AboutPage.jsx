@@ -1,5 +1,7 @@
 import React from "react";
-import { Mail, MessageCircle, MapPin, Award, BookOpen, Clock, User, Code, Calendar, Globe, Sparkles, ExternalLink } from "lucide-react";
+import { Mail, MessageCircle, MapPin, Award, BookOpen, User, Code, Globe, Sparkles, ExternalLink } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import "./AboutPage.css";
 
 const AboutPage = () => {
@@ -56,10 +58,10 @@ const AboutPage = () => {
               </div>
               <div className="social-icon-box">
                 <a href="https://github.com/Confidenceb" target="_blank" className="mini-social-btn glass-card" title="Github">
-                  <ExternalLink size={22} strokeWidth={2.5} />
+                  <FontAwesomeIcon icon={faGithub} style={{ color: "#fff", fontSize: "22px" }} />
                 </a>
                 <a href="https://wa.me/2349136936326" target="_blank" className="mini-social-btn glass-card" title="WhatsApp">
-                  <MessageCircle size={22} strokeWidth={2.5} />
+                  <FontAwesomeIcon icon={faWhatsapp} style={{ color: "#fff", fontSize: "22px" }} />
                 </a>
               </div>
             </div>
