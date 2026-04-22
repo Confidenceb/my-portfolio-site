@@ -14,7 +14,7 @@ const AboutPage = () => {
           <div className="glass-card header-glass">
             <h1 className="page-title">About <span className="highlight">Me</span></h1>
             <p className="lead-text">
-              Pioneering digital experiences with a focus on Frontend excellence and DevOps stability.
+              Frontend Developer & Chemistry Student at UNILAG, exploring the intersection of Cloud Computing and Product Management.
             </p>
           </div>
         </header>
@@ -34,7 +34,7 @@ const AboutPage = () => {
               </div>
               <div className="profile-info">
                 <h2 className="profile-name">Noibi Jamiu</h2>
-                <p className="profile-tagline">Ola Cloud | Frontend & DevOps</p>
+                <p className="profile-tagline">Ola Cloud | Frontend, PM & Cloud</p>
                 <div className="quick-summary">
                   <p>Lagos, Nigeria • Remote Expert • Built for Scale</p>
                 </div>
@@ -77,12 +77,22 @@ const AboutPage = () => {
                   <h2>My Story</h2>
                 </div>
                 <p>
-                  As "Ola Cloud," I specialize in building robust, user-centric web applications. 
-                  My journey is defined by a commitment to bridging the gap between artistic frontend design 
-                  and secure, automated backend architectures.
+                  I’m a frontend developer and a Chemistry student at the University of Lagos, passionate about building digital solutions that solve real-world problems.
                 </p>
                 <p>
-                  I'm dedicated to producing high-quality code and scalable systems that truly deliver value.
+                  My journey into tech started from curiosity and exploration. I initially spent a few months learning graphic design, followed by motion graphics, before realizing I wanted to build more functional and interactive products.
+                </p>
+                <p>
+                  That curiosity led me into programming, where I started with Python. Along the way, I encountered challenges that pushed me to rethink my path, and I eventually transitioned into HTML and CSS, this marked the beginning of my frontend development journey. Since then, I’ve been consistently improving my skills and building user-focused web applications.
+                </p>
+                <p>
+                  As I continued growing, I became increasingly interested in how scalable systems work, which led me to explore Cloud Computing, an interest that also inspired my identity as “OlaCloud.”
+                </p>
+                <p>
+                  Over time, I’ve also recognized my natural inclination toward leadership and organization. This has driven me to start exploring Product Management, where I can combine my technical background with problem-solving, user understanding, and decision-making.
+                </p>
+                <p>
+                  My goal is to grow into a well-rounded builder, someone who not only develops products but also understands how to design, manage, and scale them effectively.
                 </p>
               </div>
             </div>

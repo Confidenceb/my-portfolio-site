@@ -19,10 +19,8 @@ const AboutSection = () => {
           <p className="about">About Me</p>
           <h1 className="about-title">Personal Details</h1>
           <p className="about-description">
-            I am a passionate Frontend Developer with a keen interest in DevOps.
-            I specialize in building clean, interactive web interfaces using
-            React, JavaScript, and modern tools. My goal is to blend creativity
-            with performance to deliver exceptional user experiences.
+            I’m a frontend developer and a Chemistry student at the University of Lagos, passionate about building digital solutions that solve real-world problems. 
+            From my roots in graphic design and motion graphics to my current focus on Product Management and Cloud Computing, I blend technical skills with strategic thinking to build scalable, user-centric applications.
           </p>
           <div>
             <Link to="/about" className="btn about-btn">

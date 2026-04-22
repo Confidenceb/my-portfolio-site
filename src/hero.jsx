@@ -48,9 +48,8 @@ const Hero = () => {
             />
           </div>
           <p className="hero-description">
-            I build clean, interactive web interfaces and robust cloud architectures. 
-            Blending creativity with performance. Currently exploring Product Management 
-            with Notion & Trello.
+            Frontend Developer building clean, user-focused web applications.
+            With a growing focus on Product Management and Cloud Computing, I design and build solutions that solve real problems.
           </p>
           
           <div className="hero-info-grid">
