@@ -2,7 +2,7 @@ import React from "react";
 import { Mail, MessageCircle, MapPin, Award, BookOpen, User, Code, Globe, Sparkles, ExternalLink } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import aboutImg from "../img/about-img.JPEG";
+import aboutImg from "../img/olacloud-full-logo.png";
 import "./AboutPage.css";
 
 const AboutPage = () => {

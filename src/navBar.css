@@ -37,10 +37,18 @@
 }
 
 .nav-logo-img {
-  height: 36px;
+  height: 44px;
   width: auto;
   object-fit: contain;
   display: block;
+  /* Logo is dark navy — invert to white for dark navbar, add blue glow */
+  filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(74, 144, 226, 0.55));
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.nav-logo:hover .nav-logo-img {
+  filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(74, 144, 226, 0.9));
+  transform: scale(1.04);
 }
 
 .nav-list {
