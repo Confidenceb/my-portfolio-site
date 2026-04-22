@@ -1,7 +1,8 @@
 :root {
-  --primary: #d95a2b; /* Constant orange accent */
-  --primary-hover: #732b1a;
-  --bg-dark: #0a0a0c;
+  --primary: #4A90E2;         /* OlaCloud blue accent */
+  --primary-hover: #2f6dbf;
+  --brand-navy: #0B1F3A;      /* OlaCloud dark navy */
+  --bg-dark: #07111f;
   --glass-bg: rgba(255, 255, 255, 0.02);
   --glass-border: rgba(255, 255, 255, 0.08);
   --glass-blur: blur(25px);
@@ -20,8 +21,8 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg-dark);
-  background: radial-gradient(circle at top right, #1a1a2e, #0a0a0c),
-              radial-gradient(circle at bottom left, #2a0a0a, #0a0a0c);
+  background: radial-gradient(circle at top right, #0d2141, var(--bg-dark)),
+              radial-gradient(circle at bottom left, #091528, var(--bg-dark));
   background-attachment: fixed;
   color: var(--text-main);
   line-height: 1.6;
@@ -49,7 +50,7 @@ body {
 .btn-primary:hover {
   background: var(--primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(217, 90, 43, 0.2);
+  box-shadow: 0 10px 20px rgba(74, 144, 226, 0.25);
 }
 
 .glass-card {
@@ -63,9 +64,9 @@ body {
 }
 
 .glass-card:hover {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(74, 144, 226, 0.3);
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(217, 90, 43, 0.15);
+  box-shadow: 0 15px 40px rgba(74, 144, 226, 0.15);
 }
 
 .container {

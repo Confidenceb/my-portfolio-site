@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./navBar.css";
 import { Menu, X } from "lucide-react";
 import { NavLink, Link } from "react-router-dom";
+import olacloudLogo from "./img/olacloud-logo.png";
 
 const NavBar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -25,7 +26,7 @@ const NavBar = () => {
     <nav className={`navbar ${isScrolled ? "scrolled" : ""} ${mobileMenuOpen ? "mobile-open" : ""}`}>
       <div className="nav-container">
         <Link to="/" className="nav-logo" onClick={handleLogoClick}>
-          Ola <span>Cloud</span>
+          <img src={olacloudLogo} alt="OlaCloud Logo" className="nav-logo-img" />
         </Link>
 
         <button 

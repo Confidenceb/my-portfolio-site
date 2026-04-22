@@ -8,7 +8,7 @@
   padding: 1.2rem 2rem;
   z-index: 1000;
   transition: all 0.4s ease;
-  background: rgba(10, 10, 12, 0.4);
+  background: rgba(7, 17, 31, 0.55);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid var(--glass-border);
@@ -16,7 +16,7 @@
 }
 
 .navbar.scrolled {
-  background: rgba(10, 10, 12, 0.8);
+  background: rgba(7, 17, 31, 0.92);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   padding: 0.8rem 2rem;
@@ -31,15 +31,16 @@
 }
 
 .nav-logo {
-  font-weight: 700;
-  font-size: 1.8rem;
-  color: #fff;
-  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
   text-decoration: none;
 }
 
-.nav-logo span {
-  color: var(--primary);
+.nav-logo-img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .nav-list {
