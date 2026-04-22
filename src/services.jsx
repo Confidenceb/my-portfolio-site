@@ -8,6 +8,7 @@ import {
   faLayerGroup,
   faCodeBranch,
   faProjectDiagram,
+  faPrint,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Services = () => {
@@ -50,12 +51,18 @@ const Services = () => {
       description:
         "Using Git and GitHub to manage code changes and collaborate on projects efficiently.",
     },
+    {
+      icon: faPrint,
+      title: "OlaCloud Prints",
+      description:
+        "Professional printing services for flyers, business cards, banners, stickers, and more — delivered with quality and care under the OlaCloud Prints brand.",
+    },
   ];
 
 
   const statsData = [
     {
-      count: 8,
+      count: 11,
       label: "Projects Completed",
     },
     {
