@@ -1,20 +1,40 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./navBar.css";
 import { Menu, X } from "lucide-react";
 import { NavLink, Link } from "react-router-dom";
 import olacloudLogo from "./img/olacloud-logo.png";
 
 const NavBar = () => {
-  const [openDropdown, setOpenDropdown] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target) && !event.target.closest('.mobile-toggle')) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    const handleEscKey = (event) => {
+      if (event.key === "Escape") {
+        setMobileMenuOpen(false);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleEscKey);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscKey);
+    };
   }, []);
 
   const handleLogoClick = () => {
@@ -29,15 +49,28 @@ const NavBar = () => {
           <img src={olacloudLogo} alt="OlaCloud Logo" className="nav-logo-img" />
         </Link>
 
-        <button 
-          className="mobile-toggle" 
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        {/* This toggle button is mainly for opening or desktop access, 
+            but for mobile we also provide the close button inside the menu. */}
+        {!mobileMenuOpen && (
+          <button 
+            className="mobile-toggle" 
+            onClick={() => setMobileMenuOpen(true)}
+            aria-label="Open menu"
+          >
+            <Menu size={28} />
+          </button>
+        )}
 
-        <div className={`nav-menu ${mobileMenuOpen ? "active" : ""}`}>
+        <div ref={menuRef} className={`nav-menu ${mobileMenuOpen ? "active" : ""}`}>
+          <div className="mobile-menu-header">
+            <button 
+              className="mobile-toggle" 
+              onClick={() => setMobileMenuOpen(false)}
+              aria-label="Close menu"
+            >
+              <X size={28} />
+            </button>
+          </div>
           <ul className="nav-list">
             <li>
               <NavLink to="/" end className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMobileMenuOpen(false)}>

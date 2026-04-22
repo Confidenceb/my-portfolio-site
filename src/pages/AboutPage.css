@@ -290,8 +290,19 @@
 }
 
 @media (max-width: 768px) {
-  .page-title { font-size: 3.5rem; }
+  .about-page-wrapper {
+    padding-top: 8rem;
+    padding-bottom: 60px;
+  }
+  .about-header {
+    margin-bottom: 3rem;
+  }
+  .header-glass {
+    padding: 3rem 1.5rem;
+    border-radius: 24px;
+  }
+  .page-title { font-size: 2.5rem; }
   .profile-main { flex-direction: column; text-align: center; }
-  .profile-img-box { width: 150px; height: 150px; }
+  .profile-img-box { width: 140px; height: 140px; }
   .expertise-row { grid-template-columns: 1fr; }
 }
