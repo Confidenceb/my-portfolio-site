@@ -6,6 +6,7 @@ import Services from "../services";
 import Projects from "../project";
 import ClientFeedback from "../ClientFeedback";
 import Contact from "../Contact";
+import CallToAction from "../CallToAction";
 
 const HomePage = () => {
   const { hash } = useLocation();
@@ -27,6 +28,7 @@ const HomePage = () => {
       <AboutSection />
       <Services />
       <Projects />
+      <CallToAction />
       <ClientFeedback />
       <Contact />
     </>
