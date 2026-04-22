@@ -58,8 +58,8 @@ const projects = [
     image: lostFoundImg,
     description:
       "Developed a platform to report and find lost items. Prioritized user-friendly design and quick navigation.",
-    github: "https://github.com/Confidenceb/Lost-Found",
-    live: "https://lost-found-project.netlify.app",
+    github: "https://github.com/Confidenceb/lost-and-found-app",
+    live: "https://lost-and-found-app-iota.vercel.app/",
   },
   {
     title: "Omnifood Website",
