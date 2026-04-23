@@ -10,6 +10,8 @@ import timbuImg from "./img/timbu-cloud-app.jpg";
 import hungerHeatmapImg from "./img/hunger-heatmap.png";
 import prisusImg from "./img/prisus.png";
 import campusTradeImg from "./img/campus-trade.png";
+import awsImg from "./img/aws.jpeg";
+import githubActionsImg from "./img/github-actions.webp";
 
 const projects = [
   {
@@ -63,7 +65,7 @@ const projects = [
   {
     title: "Serverless Contact Form (AWS)",
     tags: ["AWS", "Serverless", "Cloud"],
-    image: dockerizedImg,
+    image: awsImg,
     summary: "A fully serverless contact form built using AWS services for scalable and cost-efficient form handling.",
     problem: "Traditional contact forms require backend servers, increasing cost and maintenance complexity.",
     solution: "I implemented a serverless architecture using AWS services to handle form submissions without managing servers.",
@@ -157,7 +159,7 @@ const projects = [
   {
     title: "CI/CD Pipeline with GitHub Actions",
     tags: ["DevOps", "CI/CD", "Automation"],
-    image: dockerizedImg,
+    image: githubActionsImg,
     summary: "An automated CI pipeline that builds, tests, and deploys applications using GitHub Actions.",
     problem: "Manual testing and deployment slow down development and increase the risk of errors.",
     solution: "I built a CI/CD pipeline to automate testing, linting, and deployment processes.",
