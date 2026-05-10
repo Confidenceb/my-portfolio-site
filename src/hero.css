@@ -93,6 +93,35 @@
   border-color: #fff;
 }
 
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(99, 102, 241, 0.5);
+  color: var(--primary);
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.btn-download:hover {
+  background: rgba(99, 102, 241, 0.18);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.25);
+}
+
+.btn-download svg {
+  transition: transform 0.3s ease;
+}
+
+.btn-download:hover svg {
+  transform: translateY(3px);
+}
+
 /* Visual Section */
 .hero-visual {
   position: relative;

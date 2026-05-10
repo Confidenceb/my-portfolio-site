@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import heroImg from "./img/hero-img.JPEG";
+
 import "./hero.css";
 import Typewriter from "typewriter-effect";
 
@@ -36,7 +37,7 @@ const Hero = () => {
               options={{
                 strings: [
                   "Frontend Developer",
-                  "DevOps Enthusiast",
+                  "DevOps Engineer",
                   "Cloud Engineer",
                   "Product Management",
                 ],
@@ -69,6 +70,18 @@ const Hero = () => {
             </a>
             <a href="#contact" className="btn btn-outline">
               Let's Talk
+            </a>
+            <a
+              href="/Noibi_Jamiu_Resume.pdf"
+              download="Noibi_Jamiu_Resume.pdf"
+              className="btn btn-download"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Resume
             </a>
           </div>
 

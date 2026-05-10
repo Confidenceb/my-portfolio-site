@@ -19,7 +19,7 @@ const AboutSection = () => {
           <p className="about">About Me</p>
           <h1 className="about-title">Personal Details</h1>
           <p className="about-description">
-            I’m a frontend developer and a Chemistry student at the University of Lagos, passionate about building digital solutions that solve real-world problems. 
+            I'm a frontend developer and a Chemistry student at the University of Lagos. I build digital solutions that solve real-world problems. 
             From my roots in graphic design and motion graphics to my current focus on Product Management and Cloud Computing, I blend technical skills with strategic thinking to build scalable, user-centric applications.
           </p>
           <div>

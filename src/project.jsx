@@ -211,7 +211,7 @@ export default function Projects() {
               <div key={index} className={`project-card glass-card ${isOpen ? "expanded" : ""}`}>
                 <div className="project-image-container">
                   <img src={project.image} alt={project.title} className="project-image" />
-                  <div className="project-tags">
+                  <div className="project-tags">  ``
                     {project.tags.map((tag, i) => (
                       <span key={i} className="project-tag">{tag}</span>
                     ))}

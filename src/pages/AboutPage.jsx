@@ -77,7 +77,7 @@ const AboutPage = () => {
                   <h2>My Story</h2>
                 </div>
                 <p>
-                  I’m a frontend developer and a Chemistry student at the University of Lagos, passionate about building digital solutions that solve real-world problems.
+                  I'm a frontend developer and a Chemistry student at the University of Lagos. I build digital solutions that solve real-world problems.
                 </p>
                 <p>
                   My journey into tech started from curiosity and exploration. I initially spent a few months learning graphic design, followed by motion graphics, before realizing I wanted to build more functional and interactive products.
@@ -89,10 +89,10 @@ const AboutPage = () => {
                   As I continued growing, I became increasingly interested in how scalable systems work, which led me to explore Cloud Computing, an interest that also inspired my identity as “OlaCloud.”
                 </p>
                 <p>
-                  Over time, I’ve also recognized my natural inclination toward leadership and organization. This has driven me to start exploring Product Management, where I can combine my technical background with problem-solving, user understanding, and decision-making.
+                  Over time, I've also recognized my natural inclination toward leadership and organization. This has driven me into Product Management, where I combine my technical background with problem-solving, user understanding, and decision-making.
                 </p>
                 <p>
-                  My goal is to grow into a well-rounded builder, someone who not only develops products but also understands how to design, manage, and scale them effectively.
+                  I'm building a career as a well-rounded technologist — someone who doesn't just develop products, but designs, manages, and scales them effectively.
                 </p>
               </div>
             </div>
