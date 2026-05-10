@@ -109,7 +109,6 @@ const AboutPage = () => {
                   <span className="skill-pill">Node.js</span>
                   <span className="skill-pill">AWS Cloud</span>
                   <span className="skill-pill">Docker</span>
-                  <span className="skill-pill">Terraform</span>
                   <span className="skill-pill">Product Mgmt</span>
                   <span className="skill-pill">CI/CD</span>
                 </div>
