@@ -5,7 +5,7 @@ import Lightbox from "./Lightbox";
 import horizonHacksImg from "./img/horizon-hacks.jpg";
 import innovativeMindImg from "./img/innovative-mind.JPG";
 import bite3Img from "./img/bite-3.JPEG";
-import techcrushImg from "./img/techcrush.JPG";
+import techcrushImg from "./img/techcrush.jpg";
 
 const certifications = [
   {
