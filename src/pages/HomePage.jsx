@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import Hero from "../hero";
 import AboutSection from "../about-section";
 import Services from "../services";
+import Certifications from "../certifications";
 import Projects from "../project";
 import ClientFeedback from "../ClientFeedback";
 import Contact from "../Contact";
@@ -27,6 +28,7 @@ const HomePage = () => {
       <Hero />
       <AboutSection />
       <Services />
+      <Certifications />
       <Projects />
       <CallToAction />
       <ClientFeedback />

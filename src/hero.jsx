@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import heroImg from "./img/hero-img.JPEG";
+import heroImg from "./img/new-hero-img.jpeg";
 
 import "./hero.css";
 import Typewriter from "typewriter-effect";
